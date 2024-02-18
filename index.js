@@ -6,20 +6,20 @@ import {
   serverTimestamp,
 } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 //Contact Section
-document.addEventListener('contextmenu', function(e) {
+document.addEventListener("contextmenu", function (e) {
   e.preventDefault();
   showAlert();
 });
 
 function showAlert() {
-  var alertContainer = document.getElementById('alertContainer');
-  var progressBar = alertContainer.querySelector('.progress');
+  var alertContainer = document.getElementById("alertContainer");
+  var progressBar = alertContainer.querySelector(".progress");
 
-  alertContainer.classList.add('show');
+  alertContainer.classList.add("show");
 
-  setTimeout(function() {
-    alertContainer.classList.remove('show');
-    progressBar.style.width = '0';
+  setTimeout(function () {
+    alertContainer.classList.remove("show");
+    progressBar.style.width = "0";
   }, 3000); // Duration of the progress animation (in milliseconds)
 }
 // Firebase Configuration
@@ -57,7 +57,7 @@ document
     })
       .then(function () {
         document.getElementById("contact-form").reset();
-        showAlert1(true); 
+        showAlert1(true);
         submitButton.textContent = "Send Message 💌";
       })
       .catch(function (error) {
@@ -68,25 +68,25 @@ document
   });
 
 function showAlert1(isSent) {
-  var alertContainer = document.getElementById('alertContainer1');
-  var alertMessage = document.getElementById('alertMessage1');
-  var progressBar = alertContainer.querySelector('.progress1');
+  var alertContainer = document.getElementById("alertContainer1");
+  var alertMessage = document.getElementById("alertMessage1");
+  var progressBar = alertContainer.querySelector(".progress1");
 
   if (isSent) {
     alertMessage.textContent = "Message sent";
-    alertContainer.classList.add('sent');
+    alertContainer.classList.add("sent");
   } else {
     alertMessage.textContent = "Message not sent. Try again";
-    alertContainer.classList.add('not-sent');
+    alertContainer.classList.add("not-sent");
   }
 
-  alertContainer.classList.add('show');
+  alertContainer.classList.add("show");
 
-  setTimeout(function() {
-    alertContainer.classList.remove('show');
-    alertContainer.classList.remove('sent');
-    alertContainer.classList.remove('not-sent');
-    progressBar.style.width = '0';
+  setTimeout(function () {
+    alertContainer.classList.remove("show");
+    alertContainer.classList.remove("sent");
+    alertContainer.classList.remove("not-sent");
+    progressBar.style.width = "0";
   }, 3000); // Duration of the progress animation (in milliseconds)
 }
 
