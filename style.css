@@ -881,7 +881,7 @@ p {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  
+  font-family: "Raleway", sans-serif;
   justify-content: center;
 }
 
@@ -1041,4 +1041,28 @@ p {
 
 .post-card img:hover {
   transform: scale(1.05);
+}
+.navigation {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Raleway", sans-serif;
+  justify-content: center;
+}
+
+.navigation button {
+  padding: 10px 20px;
+  background-color: #4b5563;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.navigation button:hover {
+  background-color: #374151;
 }
