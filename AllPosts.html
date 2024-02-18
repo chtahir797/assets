@@ -1,104 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog Posts</title>
 
-<link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-     <!-- Nav Bar Section  -->
-     <div class="nav-top">
-      <div class="navbar">
-        <div class="logo">
-          <img src="./assets/Logo.svg" alt="Tahir's WebApp Logo" />
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Posts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-        <div class="nav">
-          <a href="index.html">Home</a>
-          <a href="AllPosts.html">Blog</a>
-          <a href="index.html#projects">Projects</a>
-          <a href="index.html#education">Education</a>
-          <a href="index.html#contact">Contact</a>
-        </div>
+<body>
+
+  <!-- Nav Bar Section  -->
+  <div class="nav-top">
+    <div class="navbar">
+      <div class="logo">
+        <img src="./assets/Logo.svg" alt="Tahir's WebApp Logo" />
+      </div>
+
+      <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="AllPosts.html">Blog</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#education">Education</a>
+        <a href="index.html#contact">Contact</a>
       </div>
     </div>
-    <div class="container">
-      <div class="aside">
-        <div class="filter-heading">Filter Posts</div>
-        <div class="filter-input">
-          <label for="searchInput">Search</label>
-          <input
-            type="text"
-            id="searchInput"
-            class="search-input"
-            placeholder="Search posts..."
-          />
-        </div>
-        <div class="filter-input">
-          <label for="filterSelect">Filter by label</label>
-          <select id="filterSelect" class="filter-select">
-            <option value="">All</option>
-          </select>
-        </div>
-        <div class="filter-input">
-          <label for="dateInput">Filter by date</label>
-          <input type="date" id="dateInput" class="date-input" />
-        </div>
-        <div class="filter-input">
-          <label for="yearInput">Filter by year</label>
-          <input
-            type="number"
-            id="yearInput"
-            class="year-input"
-            placeholder="Enter year"
-          />
-        </div>
-        <div class="filter-input">
-          <label for="monthInput">Filter by month</label>
-          <select id="monthInput" class="month-input">
-            <option value="">All</option>
-            <option value="1">January</option>
-            <option value="2">February</option>
-            <option value="3">March</option>
-            <option value="4">April</option>
-            <option value="5">May</option>
-            <option value="6">June</option>
-            <option value="7">July</option>
-            <option value="8">August</option>
-            <option value="9">September</option>
-            <option value="10">October</option>
-            <option value="11">November</option>
-            <option value="12">December</option>
-          </select>
-        </div>
-        <div class="filter-input">
-          <button onclick="filterPosts()">Apply Filters</button>
-        </div>
+  </div>
+
+  <div class="container">
+<div class="hamburger">
+  <button class="hamburg-icon" id="hamburgIcon" onclick="toggleAsideMenu()">
+    <img src="./assets/hamburg.svg" alt="Menu" />
+  </button>
+</div>
+    <div class="aside" id="asideMenu">
+      <div class="filter-heading">Filter Posts</div>
+      <div class="filter-input">
+        <label for="searchInput">Search</label>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search posts..." />
       </div>
-      <div class="post-links" id="postLinks"></div>
-      <div class="post-content" id="postContent"></div>
+      <div class="filter-input">
+        <label for="filterSelect">Filter by label</label>
+        <select id="filterSelect" class="filter-select">
+          <option value="">All</option>
+        </select>
+      </div>
+      <div class="filter-input">
+        <label for="dateInput">Filter by date</label>
+        <input type="date" id="dateInput" class="date-input" />
+      </div>
+      <div class="filter-input">
+        <label for="yearInput">Filter by year</label>
+        <input type="number" id="yearInput" class="year-input" placeholder="Enter year" />
+      </div>
+      <div class="filter-input">
+        <label for="monthInput">Filter by month</label>
+        <select id="monthInput" class="month-input">
+          <option value="">All</option>
+          <option value="1">January</option>
+          <option value="2">February</option>
+          <option value="3">March</option>
+          <option value="4">April</option>
+          <option value="5">May</option>
+          <option value="6">June</option>
+          <option value="7">July</option>
+          <option value="8">August</option>
+          <option value="9">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
+      </div>
+      <div class="filter-input">
+        <button onclick="filterPosts()">Apply Filters</button>
+      </div>
     </div>
-     <!-- Footer Section  -->
-     <footer class="footer">
-      <div class="footer-content">
-        <div class="social-links">
-          <a href="#" class="social-icon">
-            <img src="/assets/linkedin.svg" alt="LinkedIn" />
-          </a>
-          <a href="#" class="social-icon">
-            <img src="/assets/github.svg" alt="GitHub" />
-          </a>
-        </div>
-        <p>
-          &copy; <span id="current-year"></span> Muhammad Tahir Yasin. All
-          rights reserved.
-        </p>
+    <div class="post-links" id="postLinks"></div>
+    <div class="post-content" id="postContent"></div>
+
+  </div>
+
+
+  <!-- Footer Section  -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/chtahir797/" class="social-icon">
+          <img src="/assets/linkedin.svg" alt="LinkedIn" />
+        </a>
+        <a href="https://github.com/chtahir797" class="social-icon">
+          <img src="/assets/github.svg" alt="GitHub" />
+        </a>
       </div>
-    </footer>
-    <script type="module" src="./script.js">
- 
-    </script>
-  </body>
+      <p>
+        &copy; <span id="current-year"></span> Muhammad Tahir Yasin. All
+        rights reserved.
+      </p>
+    </div>
+  </footer>
+  <script src="./AllPosts.js"></script>
+</body>
+
 </html>
