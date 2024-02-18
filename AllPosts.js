@@ -3,35 +3,9 @@ function toggleAsideMenu() {
   asideMenu.style.display =
     asideMenu.style.display === "block" ? "none" : "block";
 }
-// const displayedPosts = [];
-
-// function displayPosts(posts) {
-//   const postLinksContainer = document.getElementById("postLinks");
-//   postLinksContainer.innerHTML = ""; // Clear previous posts
-
-//   posts.forEach((item) => {
-    // const postCard = document.createElement("div");
-    // postCard.className = "post-card";
-
-    // const imageUrl = item.content.match(/src="(.*?)"/)[1]; // Extract the image URL
-    // const description = item.content.split(" ").slice(0, 50).join(" "); // Take first 30 words
-    // const firstParagraph = item.content.match(/<p>(.*?)<\/p>/)[1];
-    // postCard.innerHTML = `
-    //         <h2>${item.title}</h2>
-    //         <div class="post-image">
-    //              <img src="${imageUrl}" alt="${item.title}">
-    //         </div>
-    //         <p>${firstParagraph || "Not Found Description"}</p>
-    //     `;
-    // postCard.onclick = function () {
-    //   viewPostDetails(item);
-    // };
-    // postLinksContainer.appendChild(postCard);
-//   });
-// }
 
 const displayedPosts = [];
-const postsPerPage = 4; // Number of posts to display per page
+const postsPerPage = 6; // Number of posts to display per page
 let currentPage = 1; // Current page
 
 function displayPosts(posts) {

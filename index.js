@@ -6,7 +6,22 @@ import {
   serverTimestamp,
 } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 //Contact Section
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+  showAlert();
+});
 
+function showAlert() {
+  var alertContainer = document.getElementById('alertContainer');
+  var progressBar = alertContainer.querySelector('.progress');
+
+  alertContainer.classList.add('show');
+
+  setTimeout(function() {
+    alertContainer.classList.remove('show');
+    progressBar.style.width = '0';
+  }, 3000); // Duration of the progress animation (in milliseconds)
+}
 // Firebase Configuration
 const firebaseConfig = {
   apiKey: "AIzaSyDocauDFZvF-ID17iythlrKRvJopwkTvnM",
@@ -41,21 +56,39 @@ document
       timestamp: serverTimestamp(),
     })
       .then(function () {
-        // Reset form after submission
         document.getElementById("contact-form").reset();
-        alert("Message stored successfully!");
-        // Change button text back to "Send Message"
+        showAlert1(true); 
         submitButton.textContent = "Send Message 💌";
       })
       .catch(function (error) {
         console.error("Error submitting feedback:", error);
-        // Show error message
-        alert("Error storing message. Please try again later.");
-        // Change button text back to "Send Message"
+        showAlert1(false); // Show "Message not sent"
         submitButton.textContent = "Send Message 💌";
       });
   });
 
+function showAlert1(isSent) {
+  var alertContainer = document.getElementById('alertContainer1');
+  var alertMessage = document.getElementById('alertMessage1');
+  var progressBar = alertContainer.querySelector('.progress1');
+
+  if (isSent) {
+    alertMessage.textContent = "Message sent";
+    alertContainer.classList.add('sent');
+  } else {
+    alertMessage.textContent = "Message not sent. Try again";
+    alertContainer.classList.add('not-sent');
+  }
+
+  alertContainer.classList.add('show');
+
+  setTimeout(function() {
+    alertContainer.classList.remove('show');
+    alertContainer.classList.remove('sent');
+    alertContainer.classList.remove('not-sent');
+    progressBar.style.width = '0';
+  }, 3000); // Duration of the progress animation (in milliseconds)
+}
 
 // Function to start chat
 function startChat() {
