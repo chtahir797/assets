@@ -335,7 +335,7 @@ body {
 }
 
 .my-picture {
-  background-image: url("/assets/Vector.png");
+  background-image: url("./assets/Vector.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
