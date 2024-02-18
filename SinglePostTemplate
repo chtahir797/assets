@@ -1,0 +1,14 @@
+<div class="container">
+        <div class="post">
+            <div class="post-image">
+                <img src="https://images.unsplash.com/photo-1683009427666-340595e57e43?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sample Image">
+            </div>
+          
+            <div class="post-content">
+                <p>This is a sample blog post content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id orci vitae enim suscipit vehicula. Integer id lacus vel sapien ullamcorper rutrum. Sed pharetra nulla eu ante aliquam, vel ultricies nunc tempor. Sed id fringilla dui. In hac habitasse platea dictumst.</p>
+                <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras vitae metus ac turpis dictum aliquet vel vel elit. Donec ac erat ac nunc varius malesuada nec sed nulla. Nullam euismod, tortor at suscipit tincidunt, nisi arcu dignissim orci, vel varius ligula libero nec arcu.</p>
+                <p>Integer id lacus vel sapien ullamcorper rutrum. Sed pharetra nulla eu ante aliquam, vel ultricies nunc tempor. Sed id fringilla dui. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+            </div>
+            <a href="#" class="read-more">Read more</a>
+        </div>
+    </div>

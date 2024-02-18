@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Nav Bar Section  -->
+    <div class="nav-top">
+      <div class="navbar">
+        <div class="logo">
+          <img src="./assets/Logo.svg" alt="Tahir's WebApp Logo" />
+        </div>
+
+        <div class="nav">
+          <a href="#home">Home</a>
+          <a href="/AllPosts.html">Blog</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </div>
+       
+      </div>
+    </div>
+    <!-- Hero Section  -->
+    <div class="hero-parent" id="home">
+      <div class="hero">
+        <!-- Section 1 -->
+        <div class="my-detail">
+          <div class="greeting">
+            <p>👋 Welcome</p>
+          </div>
+          <div class="name">
+            <div class="firstname">
+              <h1>Muhammad Tahir</h1>
+            </div>
+            <div class="lastname">
+              <h1>Yasin</h1>
+            </div>
+          </div>
+          <div class="designation">
+            <p>Front-end developer - React</p>
+          </div>
+          <div class="social">
+            <div class="icon-1">
+              <a href="#">
+                <img src="./assets/linkedin.svg" alt="Tahir Linkedin" />
+              </a>
+            </div>
+            <div class="icon-2">
+              <a href="#">
+                <img src="./assets/github.svg" alt="Tahir Github" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Section 2 -->
+        <div class="myprofilepic">
+          <img src="./assets/TahirAvatar.jpg" alt="Tahir Github" />
+        </div>
+        <div class="mycv">
+          <div class="Download-Button">
+            <button onclick="downloadCV()">Download CV</button>
+            <img src="./assets/Download.svg" alt="Download Icon" />
+          </div>
+          <div class="Talk-Button">
+            <img src="./assets/WhatsappLogo.svg" alt="Whatsapp Icon" />
+            <button onclick="startChat()">Let's Talk</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Experience Section  -->
+    <div class="education-parent" id="experience">
+      <div class="education">
+        <div class="programmer-card">
+          <div class="icon">
+            <img src="./assets/CodeIcon.svg" alt="Code Icon" />
+          </div>
+          <div class="experience">
+            <p>2+ Months as</p>
+          </div>
+          <div class="designation">
+            <h2>React Dev</h2>
+          </div>
+        </div>
+
+        <div class="work-card">
+          <div class="icon">
+            <img src="./assets/CodeIcon.svg" alt="Code Icon" />
+          </div>
+          <div class="experience">
+            <p>1 Month of</p>
+          </div>
+          <div class="designation">
+            <h2>Experience</h2>
+          </div>
+        </div>
+
+        <div class="blogger-card">
+          <div class="icon">
+            <img src="./assets/CodeIcon.svg" alt="Code Icon" />
+          </div>
+          <div class="experience">
+            <p>3+ Months as</p>
+          </div>
+          <div class="designation">
+            <h2>JavaScript Dev</h2>
+          </div>
+        </div>
+      </div>
+      <!-- section 2 -->
+      <div class="section-2">
+        <div class="developer">
+          <p>Innovation</p>
+          <h2>Front-end</h2>
+        </div>
+
+        <div class="projects">
+          <p>Creativity</p>
+          <h2>Projects</h2>
+        </div>
+
+        <div class="freelancing">
+          <p>Innovate</p>
+          <h2>Coding</h2>
+        </div>
+      </div>
+    </div>
+    <!-- About Section  -->
+    <div class="about-parent" id="About">
+      <div class="about">
+        <!-- section 1 -->
+        <div class="my-picture">
+          <img src="./assets/Profile.png" alt="Tahir Profile Pic" />
+        </div>
+        <!-- section 2 -->
+        <div class="about-me">
+          <!-- div 1 -->
+          <div class="small-card">
+            <p>🧐 About-me</p>
+          </div>
+          <!-- div 2 -->
+          <div class="name">
+            <div class="firstname">
+              <h1>Muhammad Tahir</h1>
+            </div>
+            <div class="lastname">
+              <h1>Yasin</h1>
+            </div>
+          </div>
+          <!-- div 3 -->
+          <div class="call-me">
+            <p>
+              👋 My name is Muhammad Tahir Yasin, but you can just call me
+              Tahir. Pleasure!
+            </p>
+          </div>
+          <div class="edu">
+            <p>
+              👨‍💻 For over 6 months developing and programming interfaces with
+              JavaScript and ReactJs.
+            </p>
+            <p>
+              🎓 Graduated in Information Technology from Quaid i Azam
+              University Islamabad
+            </p>
+            <p>
+              💡 Interests in Front-end development with JavaScript, and ReactJs
+            </p>
+          </div>
+          <div class="better">
+            🚀 Trying to be a little better than yesterday every day.
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Project Sections -->
+    <div class="parent" id="projects">
+      <div class="heading">
+        <h2>My Recent Projects</h2>
+        <p>It's always good to know a little about my work.</p>
+      </div>
+      <div class="project-parent">
+        <div class="project">
+          <!-- Project Cards will be dynamically generated here -->
+        </div>
+      </div>
+      <!-- Modal -->
+      <div id="modal" class="modal">
+        <span class="close" id="close">&times;</span>
+        <iframe
+          id="video-frame"
+          title="video"
+          width="560"
+          height="315"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- Education Section  -->
+
+    <div class="qual-parent" id="education">
+      <div class="qual">
+        <p>🎓 Education & 💼 Career</p>
+      </div>
+      <div class="parent-edu">
+        <!-- Academic Area -->
+        <div class="qualification">
+          <div class="education-heading">
+            <h2>Academic Area</h2>
+          </div>
+          <div class="education-card">
+            <div class="education-heading">
+              <h4>IT Graduate from QAU</h4>
+            </div>
+            <div class="education-desc">
+              <p>
+                Recently graduated from Quaid i Azam University Islamabad with a
+                Bachelor's degree in Information Technology, I bring a
+                foundation in HTML, CSS, JavaScript, and React JS to further
+                enhance my skills and contribute effectively in the professional
+                landscape.
+              </p>
+            </div>
+            <div class="date">
+              <div class="time">
+                <p>4 Years</p>
+              </div>
+              <div class="current">
+                <p>September/2019 · December/2024</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Professional Area -->
+        <div class="career">
+          <div class="career-heading">
+            <h2>Professional Area</h2>
+          </div>
+          <div class="career-card">
+            <div class="card-heading">
+              <h4>Front-end developer at Napollo</h4>
+            </div>
+            <div class="card-desc">
+              <p>
+                Interning at Napollo, I actively contribute to advancing
+                features within the main application and website. My
+                responsibilities encompass HTML, CSS, JavaScript, and React JS,
+                demonstrating adeptness in contemporary web technologies.
+              </p>
+            </div>
+            <div class="date">
+              <div class="time">
+                <p>2 Months</p>
+              </div>
+              <div class="current">
+                <p>January/2024 · Currently</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience Section  -->
+    <div class="experience-parent">
+      <div class="exp">
+        <p>🧑‍💻 Skills - Experiences</p>
+      </div>
+      <div class="tech">
+        <h1>Technologies and skills</h1>
+      </div>
+      <div class="technlogies">
+        <div class="used-tech">
+          <p>Tech I use every day</p>
+        </div>
+        <div class="tech-img">
+          <div class="html">
+            <img src="/assets/HTML.svg" alt="html" />
+          </div>
+          <div class="css">
+            <img src="/assets/CSS.svg" alt="css icon" />
+          </div>
+          <div class="javascript">
+            <img src="/assets/Javascript.svg" alt="javascript icon" />
+          </div>
+          <div class="react">
+            <img src="/assets/React.svg" alt="react icon" />
+          </div>
+          <div class="github">
+            <img src="/assets/Github-1.svg" alt="github icon" />
+          </div>
+          <div class="gitbash">
+            <img src="/assets/Gitbash.svg" alt="gitbash icon" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section  -->
+    <section class="contact-section" id="contact">
+      <div class="contact-message">
+        <h2>Ready to turn your ideas into reality?</h2>
+        <p>
+          Let's create something amazing together! Connect with me on social
+          media and share your thoughts.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-icon">
+            <img src="/assets/github.svg" alt="GitHub" />
+          </a>
+          <a href="#" class="social-icon">
+            <img src="/assets/linkedin.svg" alt="LinkedIn" />
+          </a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <form id="contact-form">
+          <label for="name">Your Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+
+          <label for="email">Your Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+
+          <label for="message">Your Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Type your message here"
+            required
+          ></textarea>
+
+          <button type="submit">Send Message 💌</button>
+        </form>
+      </div>
+    </section>
+    <!-- Post Section -->
+
+
+    <!-- Footer Section  -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="social-links">
+          <a href="#" class="social-icon">
+            <img src="/assets/linkedin.svg" alt="LinkedIn" />
+          </a>
+          <a href="#" class="social-icon">
+            <img src="/assets/github.svg" alt="GitHub" />
+          </a>
+        </div>
+        <p>
+          &copy; <span id="current-year"></span> Muhammad Tahir Yasin. All
+          rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-toastify/8.0.2/react-toastify.min.js"></script>
+    <script type="module" src="./script.js">
+
+
+
+
+    </script>
+  </body>
+</html>
