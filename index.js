@@ -5,17 +5,11 @@ import {
   addDoc,
   serverTimestamp,
 } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+import firebaseConfig from './config.js'
 //Contact Section
 
-// Firebase Configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyDocauDFZvF-ID17iythlrKRvJopwkTvnM",
-  authDomain: "chtahirportfolio.firebaseapp.com",
-  projectId: "chtahirportfolio",
-  storageBucket: "chtahirportfolio.appspot.com",
-  messagingSenderId: "961935495919",
-  appId: "1:961935495919:web:6cd1cd6a7deb6981dd811a",
-};
+
+
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app); // Initialize Firestore
